@@ -36,8 +36,6 @@ function receiveTipPercentageValue(value) {
 }
 
 function receiveCustonTipPercentageValue(){
-  if (buttonSelected!== null){
-  buttonSelected.classList.remove("button-selected")
   buttonSelected = null 
  }
 
@@ -61,3 +59,29 @@ function calculate(){
     console.log("preencha tudo")
    }
  }
+  
+ function reset(){
+    document.querySelector("#bill").value = ""
+    
+    numberOfPeople = 0
+    document.querySelector("#people").value = ""
+
+    tipPercentage = 0
+    removeButtonSeectedClass()
+
+    let customTipImput = document.querySelector("#custom-tip").ValueAsNumber
+    
+   console.log(customTipImput)
+
+   if (customTipImput!==""){
+    customTipImput.value =  ""
+}
+
+ } document.querySelector(".amout strong").innerText = "$0.00"
+document.querySelector(".total strong").innerText = "$0.00"
+
+function removeButtonSeectedClass(){
+    if (buttonSelected!== null){
+        buttonSelected.classList.remove("button-selected")
+
+}
