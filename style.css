@@ -97,6 +97,9 @@ input{
         padding-block: .6rem;
         border-radius: 5px;
     }
+    .button-selected {
+        background: var(---topaz);
+    }
     
     input{
     width: 100%;
